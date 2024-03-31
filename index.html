@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D01-Encriptador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="img/Poli_avatar.jpg" id="mago" width="10%">
+    <h1>El Encriptador</h1>
+  </header>
+  <main>
+    <div class="encript">
+      <div class="parTextoBoton">
+        <label for="frase1" id="tituTxArea">Entrada</label>
+        <textarea cols="50" rows="10" id="frase1" class="inputPadron" placeholder="Entrada: texto a encriptar"></textarea>
+        <button onclick="encriptar();" class="container_boton" id="encriptar"> Encriptar </button>
+        <button onclick="desencriptar();" class="container_boton" id="desencrip"> Desencriptar</button>
+      </div>
+      <div class="parTextoBoton">
+        <label for="frase2" id="tituTxArea">Salida</label>
+        <textarea cols="50" rows="10" id="frase2" class="inputPadron" placeholder="Salida:texto encriptado"></textarea>
+        <button onclick="copiaTexto();" class="container_boton" id="copiaTexto"> Copiar</button>
+        <button onclick="pegaTexto();" class="container_boton" id="pegaTexto"> Pegar</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p class="misDatos">Policarpo Acho - Alumno Alura ONE G6 - 31.03.2024</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+header{
+  opacity: 98%;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("img/bgVerde.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+    background-position: top ;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+}
+header{  
+  font-family: 'Chakra Petch', sans-serif;
+  color: aquamarine;
+  font-size: 150%;
+  text-align: center;
+  padding-bottom: 1%;
+}
+.encript{
+  display: flex;
+  font-family: 'Chakra Petch', sans-serif;
+  color: aquamarine;
+  font-size: 110%;
+  text-align: left;
+  padding-bottom: 1%;
+/*  flex-direction: column;
+  align-items: center;
+  */
+}
+.parTextoBoton {
+  flex: 1;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+textarea{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+}
+button {
+  width: 100%;
+  margin-bottom: 5px;
+}
+footer{
+  color: aquamarine;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .encript {
+    flex-direction: column;
+  }
+  .parTextoBoton{      
+    margin-bottom: 15px;
+  }
+}
