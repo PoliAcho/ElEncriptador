@@ -9,7 +9,8 @@ function encriptar(){
     texto2.value=textoEncriptado;
   }else{
     texto2.value='ERROR: El texto a encriptar no debe tener mayúsculas ni caracteres especiales.';
-  }}
+  }
+}
 
 function desencriptar(){
   if (textOk()) {
@@ -17,17 +18,22 @@ function desencriptar(){
     let rgDese=new RegExp(tmpDat.join("|"),"g");
     let datosD={"ai":"a","enter":"e","imea":"i","ober":"o","ufat":"u"};
     let textoDesencriptado = texto1.value.replace(rgDese,function(match){
-      return datosD[match]})
+      return datosD[match]
+    })
     texto2.value=textoDesencriptado;
   }else{
     texto2.value='ERROR: El texto a desencriptar no debe tener mayúsculas ni caracteres especiales.';
-  }}
+  }
+}
 
 function textOk(){
   for (let i= 0; i< texto1.value.length; i++) {
     if(!(texto1.value[i] >= "a" && texto1.value[i] <= "z") && texto1.value[i] !== " "){
-      return false;}}
-  return true;}
+      return false;
+    }
+  }
+  return true;
+}
   
 function copiaTexto() {
   const textoACopiar = document.getElementById('frase2').value;
@@ -38,7 +44,9 @@ function copiaTexto() {
       texto2.value='';
     })
     .catch(err => {
-      console.error('Error al copiar el texto al portapapeles: ', err);});}
+      console.error('Error al copiar el texto al portapapeles: ', err);
+    });
+}
 
 function pegaTexto() {
   navigator.clipboard.readText()
