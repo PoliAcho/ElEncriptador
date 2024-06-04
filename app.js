@@ -3,7 +3,7 @@ let texto2=document.getElementById('frase2');
 
 function encriptar(){
   if (textOk()) {
-    let datosE = {"a":"ai","e":"enter","i":"imea","o":"ober","u":"ufat"};
+    let datosE = {"a":"ai","e":"enter","i":"imes","o":"ober","u":"ufat"};
     let textoEncriptado = texto1.value.replace(/[aeiou]/g, function(match){
       return datosE[match]})
     texto2.value=textoEncriptado;
@@ -14,9 +14,9 @@ function encriptar(){
 
 function desencriptar(){
   if (textOk()) {
-    let tmpDat=["enter","imea","ai","ober","ufat"];
+    let tmpDat=["ai","enter","imes","ober","ufat"];
     let rgDese=new RegExp(tmpDat.join("|"),"g");
-    let datosD={"ai":"a","enter":"e","imea":"i","ober":"o","ufat":"u"};
+    let datosD={"ai":"a","enter":"e","imes":"i","ober":"o","ufat":"u"};
     let textoDesencriptado = texto1.value.replace(rgDese,function(match){
       return datosD[match]
     })
@@ -27,7 +27,7 @@ function desencriptar(){
 }
 
 function textOk(){
-  for (let i= 0; i< texto1.value.length; i++) {
+  for (let i = 0; i< texto1.value.length; i++) {
     if(!(texto1.value[i] >= "a" && texto1.value[i] <= "z") && texto1.value[i] !== " "){
       return false;
     }
